@@ -25,7 +25,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Dwayne Johnson, Aldis Hodge, Pierce Brosnan, Noah Centineo',
       Plot: 'Nearly 5,000 years after he was bestowed with the almighty powers of the ancient gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BYzZkOGUwMzMtMTgyNS00YjFlLTg5NzYtZTE3Y2E5YTA5NWIyXkEyXkFqcGdeQXVyMjkwOTg3Njc@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BYmM3OTM4NDktMmI2NS00OWU0LTg4OTQtNjZhMmFkYjhmOGY1XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
     {
       imdbID: 'act-2',
@@ -38,7 +38,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Gemma Chan, Richard Madden, Angelina Jolie, Salma Hayek',
       Plot: 'Following the events of Avengers: Endgame (2019), an unexpected tragedy forces the Eternals, ancient aliens who have been living on Earth in secret for thousands of years, out of the shadows to reunite against mankind\'s most ancient enemy, the Deviants.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMTExZmVjY2ItYTAzYi00MDdlLTg2YmMtNDM3OWRkMDgyYTBkXkEyXkFqcGdeQXVyODIyOTEyMzY@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BZTBiZjI2M2UtZTNiNy00NmU4LWJiMjYtZjk4MDIzMzhlMjFlXkEyXkFqcGc@._V1_SX300.jpg',
     },
     {
       imdbID: 'act-3',
@@ -51,7 +51,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Tom Cruise, Jennifer Connelly, Miles Teller, Val Kilmer',
       Plot: 'After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN\'s elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BOWQwOTA1OTQtNzg3Yi05ODY1LTg0ZDUtYjhiZDhkOWFkMTM2XkEyXkFqcGdeQXVyODA0MjgyNzM@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMDBkZDNjMWEtOTdmMi00NmExLTg5MmMtNTFlYTJlNWY5YTdmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
     {
       imdbID: 'act-4',
@@ -64,7 +64,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'John David Washington, Robert Pattinson, Elizabeth Debicki, Juhan Ulfsak',
       Plot: 'Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtZTIxOC00MjJkLTlmYTUtMTE1N2EwYzc1YTE4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BNTIzNDIxMzktMzlkMi00MmUyLWFmMjQtZDgwMjBmOGJmNTI3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
   ],
   Drama: [
@@ -79,7 +79,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler',
       Plot: 'Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BNDE3ODcxNDM5OF5BMl5BanBnXkFtZTgwNTU5OTUzOTE@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg',
     },
     {
       imdbID: 'dra-2',
@@ -92,7 +92,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Marlon Brando, Al Pacino, James Caan, Diane Keaton',
       Plot: 'The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.',
       Language: 'English, Italian, Latin',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwZi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_QL75_UY562_CR8,0,380,562_.jpg',
     },
     {
       imdbID: 'dra-3',
@@ -105,7 +105,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Tom Hanks, Robin Wright, Gary Sinise, Sally Field',
       Plot: 'The history of the United States from the 1950s to the 1970s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BNWIwODRlYTUtZjFmMy00Yzg1LWIzYjUtMzhjMWY2MjUyYjEwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BNDYwNzVjMTItZmU5YS00YjQ5LTljYjgtMjY2NDVmYWMyNWFmXkEyXkFqcGc@._V1_QL75_UY562_CR4,0,380,562_.jpg',
     },
     {
       imdbID: 'dra-4',
@@ -118,7 +118,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Christian Bale, Heath Ledger, Aaron Eckhart, Maggie Gyllenhaal',
       Plot: 'When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.',
       Language: 'English, Mandarin',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
   ],
   Romance: [
@@ -133,7 +133,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Shailene Woodley, Ansel Elgort, Nat Wolff, Laura Dern',
       Plot: 'Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.',
       Language: 'English, Dutch',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMjA4NzkxNjg5N15BMl5BanBnXkFtZTgwMDU2Njc4MTE@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BYTA4ODg5YWUtYmZiYy00Y2M4LWE0NjEtODE5MzhkYmJmZGEwXkEyXkFqcGc@._V1_SX300.jpg',
     },
     {
       imdbID: 'rom-2',
@@ -146,7 +146,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates',
       Plot: 'A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.',
       Language: 'English, Swedish, Italian, French',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BYzYyN2FiZmUtYWYzMy00MzViLWJkZTMtOGY1ZjgzNWMwN2YxXkEyXkFqcGc@._V1_QL75_UX380_CR0,2,380,562_.jpg',
     },
     {
       imdbID: 'rom-3',
@@ -159,7 +159,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Ryan Gosling, Emma Stone, Rosemarie DeWitt, J.K. Simmons',
       Plot: 'While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
     {
       imdbID: 'rom-4',
@@ -172,7 +172,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Domhnall Gleeson, Rachel McAdams, Bill Nighy, Lydia Wilson',
       Plot: 'At the age of 21, Tim discovers he can travel in time and change what happens and has happened in his own life. His decision to make his world a better place by getting a girlfriend turns out to be not as easy as you might think.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMTY1OTg0MjE3OF5BMl5BanBnXkFtZTgwNTMxMDQ3MDE@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMTA1ODUzMDA3NzFeQTJeQWpwZ15BbWU3MDgxMTYxNTk@._V1_SX300.jpg',
     },
   ],
   Thriller: [
@@ -187,7 +187,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Leonardo DiCaprio, Emily Mortimer, Mark Ruffalo, Ben Kingsley',
       Plot: 'Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, Rachel Solando.',
       Language: 'English, German',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BN2FjNWExYzEtY2YzOC00YjNlLTllMTQtNmIwM2Q1YzBhOWM1XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
     {
       imdbID: 'thr-2',
@@ -200,7 +200,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Mélanie Laurent, Mathieu Amalric, Malik Zidi',
       Plot: 'A woman wakes up in a cryogenic chamber with no recollection of how she got there, and must find a way out before her oxygen supply runs out.',
       Language: 'French',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BNDZlMDI5N2ItNDU1Yy00MTU2LWFhMzMtM2FhNmE5NWJkMTFmXkEyXkFqcGdeQXVyODk2NDQ3MTA@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BY2IyZTFkZGEtM2JiOC00NDMyLThmOTktZDEzYzFlZTc4YzJkXkEyXkFqcGc@._V1_SX300.jpg',
     },
     {
       imdbID: 'thr-3',
@@ -213,7 +213,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Sosie Bacon, Jessie T. Usher, Kyle Gallner, Robin Weigert',
       Plot: 'After witnessing a bizarre, traumatic incident involving a patient, Dr. Rose Cotter starts experiencing frightening occurrences that she can\'t explain. Rose must confront her troubling past in order to survive.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BZjE2ZWIwMWEtNGFlMy00MDRlLWIzMDgtYmI4Yjg0ODgwMDM5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BNjFhMzBlNzktMjE2Ni00YTMyLWI2YWUtYmM1N2QxMDQwZmZhXkEyXkFqcGc@._V1_SX300.jpg',
     },
     {
       imdbID: 'thr-4',
@@ -226,7 +226,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Ryan Gosling, Chris Evans, Ana de Armas, Billy Bob Thornton',
       Plot: 'When the CIA\'s most skilled mercenary—whose true identity is known to no one—accidentally uncovers dark agency secrets, a psychopathic former colleague puts a bounty on his head, triggering a global manhunt by international assassins.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BOWYxMjYyZjEtM2MyZS00ZGYxLWEzMDMtYTIwMzk4MGMxMDUyXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BZmFhZTNlNzctZGQzZi00MTA3LThiNjMtYWQzNjUzMjNjZjA3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
     {
       imdbID: 'thr-5',
@@ -239,7 +239,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Ralph Fiennes, Anya Taylor-Joy, Nicholas Hoult, Hong Chau',
       Plot: 'A young couple travels to a remote island to eat at an exclusive restaurant where the chef has prepared a lavish menu, with some shocking surprises.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMzdjNjI5MmYtODc1My00ODdiLTk5OTYtYzI3MDlhM2FjNDU0XkEyXkFqcGdeQXVyMTM1MTEyNDQx._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BN2Q0YWE1MjktODJlMi00NTRiLWI2ZTctZTAxNjkyODVjM2EyXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg',
     },
   ],
   Western: [
@@ -254,7 +254,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Jamie Foxx, Christoph Waltz, Leonardo DiCaprio, Kerry Washington',
       Plot: 'With the assistance of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.',
       Language: 'English, German, French',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjUxM15BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
     {
       imdbID: 'wes-2',
@@ -267,7 +267,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Samuel L. Jackson, Kurt Russell, Jennifer Jason Leigh, Walton Goggins',
       Plot: 'In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin inhabited by a collection of nefarious characters.',
       Language: 'English, Spanish',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMjA1MTc1NTg5NV5BMl5BanBnXkFtZTgwOTM2NjQzNzE@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMjA1MTc1NTg5NV5BMl5BanBnXkFtZTgwOTM2MDEzNzE@._V1_SX300.jpg',
     },
     {
       imdbID: 'wes-3',
@@ -280,7 +280,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Clint Eastwood, Gene Hackman, Morgan Freeman, Richard Harris',
       Plot: 'Retired Old West gunslinger William Munny reluctantly takes on one last job, with the help of his old partner Ned Logan and a young man, The \'Schofield Kid\'.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BODM3YWY4NmYtN2YwNi00YjZhLTlhZGMtM2E2ZmFhNTg0NDkyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BNmZmMzM3YWMtZjg5Yi00M2MxLTg3ZGItNGU4YjQxNDAxM2Q4XkEyXkFqcGc@._V1_SX300.jpg',
     },
     {
       imdbID: 'wes-4',
@@ -293,7 +293,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Clint Eastwood, Eli Wallach, Lee Van Cleef, Aldo Giuffrè',
       Plot: 'A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.',
       Language: 'Italian, English, Spanish',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BOTQ5NDI1NDc4M15BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMWM5ZjQxM2YtNDlmYi00ZDNhLWI4MWUtN2VkYjBlMTY1ZTkwXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg',
     },
   ],
   Horror: [
@@ -308,7 +308,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Ward Horton, Annabelle Wallis, Alfre Woodard, Tony Amendola',
       Plot: 'A couple starts to experience terrifying supernatural occurrences involving a vintage doll shortly after their home is invaded by satanic cultists.',
       Language: 'English, Aramaic',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BOTM1MDU0M2MtNzE1My00M2U5LTk0NDItMTI3MTlhMzA4NDkwXkEyXkFqcGdeQXVyNDQxNjcxNQ@@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BNjkyMDU5ZWQtZDhkOC00ZWFjLWIyM2MtZWFhMDUzNjdlNzU2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
     {
       imdbID: 'hor-2',
@@ -321,7 +321,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Allison Williams, Violet McGraw, Ronny Chieng, Amie Donald',
       Plot: 'A robotics engineer at a toy company builds a life-like doll that begins to take on a life of its own.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMDk4MTdhYzEtODFkYS00MjM0LTk5NTgtNzQ3ZDQ2NDQzNTQxXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BYjU1ZWMxYTUtNzQ1ZC00ZTcxLTg0NTMtMzY1ZmQyZjhmYjMyXkEyXkFqcGc@._V1_SX300.jpg',
     },
     {
       imdbID: 'hor-3',
@@ -334,7 +334,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Nathalie Emmanuel, Thomas Doherty, Sean Pertwee, Hugh Skinner',
       Plot: 'A young woman is courted and swept off her feet, only to realize a gothic conspiracy is afoot.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BYzA2NWI5NDgtNDgzNy00MzhkLWIwYTItOWQwYTQ2ODc1ZWRlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMTkzODMwNDkzOF5BMl5BanBnXkFtZTgwNDA4NzA1ODE@._V1_SX300.jpg',
     },
     {
       imdbID: 'hor-4',
@@ -347,7 +347,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Isabelle Fuhrman, Julia Stiles, Hiro Kanagawa, Rossif Sutherland',
       Plot: 'After orchestrating a brilliant escape from an Estonian psychiatric facility, Esther travels to America by impersonating the missing daughter of a wealthy family.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BM2NjOWVkMDYtYmI0Yy00NTkxLThhOTctNDVlOTBkMTQ5NTE2XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BYzU1MGZmODctODU0ZC00YjllLWE3ZmYtNmFmZjE1ZjE3YzVkXkEyXkFqcGc@._V1_SX300.jpg',
     },
     {
       imdbID: 'hor-5',
@@ -360,7 +360,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Annalise Basso, Elizabeth Reaser, Lulu Wilson, Henry Thomas',
       Plot: 'In 1967 Los Angeles, a widowed mother and her two daughters add a new stunt to bolster their seance scam business, inviting an authentic evil into their home.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BNTdmNjZkOTYtMTJjMS00NzNmLWJiMTUtN2NlZWI5MmY4Y2VkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BNzhmYzkyNjUtNmI2OC00MWY2LWFjN2MtNjIwMGRkOWMyYzI0XkEyXkFqcGc@._V1_SX300.jpg',
     },
   ],
   Fantasy: [
@@ -375,7 +375,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Daniel Radcliffe, Emma Watson, Rupert Grint, Ralph Fiennes',
       Plot: 'Harry, Ron, and Hermione search for Voldemort\'s remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWUxLTgwN2YtYjE2MjA5N2E0OTEwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_SX300.jpg',
     },
     {
       imdbID: 'fan-2',
@@ -388,7 +388,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Elijah Wood, Ian McKellen, Orlando Bloom, Sean Bean',
       Plot: 'A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.',
       Language: 'English, Sindarin',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_QL75_UX380_CR0,1,380,562_.jpg',
     },
     {
       imdbID: 'fan-3',
@@ -401,7 +401,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Tilda Swinton, Georgie Henley, William Moseley, Skandar Keynes',
       Plot: 'Four kids travel through a wardrobe to the land of Narnia and learn of their destiny to free it with the guidance of a mystical lion.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMTc0NTAyNDQ0NV5BMl5BanBnXkFtZTcwNzUxODkyMw@@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMTc0NTUwMTU5OV5BMl5BanBnXkFtZTcwNjAwNzQzMw@@._V1_SX300.jpg',
     },
     {
       imdbID: 'fan-4',
@@ -414,7 +414,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Sam Worthington, Zoe Saldana, Sigourney Weaver, Michelle Rodriguez',
       Plot: 'A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.',
       Language: 'English, Na\'vi',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BYjhiNjBlODUtY2UxYi00YzhhLWFhOWMtZTlhNWFiNzUxMWUxXkEyXkFqcGdeQXVyNDJhMDc0NzU@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMDEzMmQwZjctZWU2My00MWNlLWE0NjItMDJlYTRlNGJiZjcyXkEyXkFqcGc@._V1_SX300.jpg',
     },
   ],
   Music: [
@@ -429,7 +429,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Miles Teller, J.K. Simmons, Paul Reiser, Melissa Benoist',
       Plot: 'A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student\'s potential.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BOTA5NDY1NTA4OF5BMl5BanBnXkFtZTgwODI5OTE3MDE@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMDFjOWFkYzktYzhhMC00NmYyLTkwY2EtYjViMDhmNzg0OGFkXkEyXkFqcGc@._V1_SX300.jpg',
     },
     {
       imdbID: 'mus-2',
@@ -455,7 +455,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Lady Gaga, Bradley Cooper, Sam Elliott, Greg Grunberg',
       Plot: 'A musician helps a young singer find fame as age and alcoholism send his own career into a downward spiral.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BN2MyZjA3MTYtNzhjMS00ODY0LWJmOTUtYzc0MjUxODY3N2E5XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BNGUxZTc0NTAtNzQwMy00MmM2LTgzMGYtZWIyY2E1MGFjYmM5XkEyXkFqcGc@._V1_SX300.jpg',
     },
     {
       imdbID: 'mus-4',
@@ -468,7 +468,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Riz Ahmed, Olivia Cooke, Paul Raci, Lauren Ridloff',
       Plot: 'A heavy-metal drummer\'s life is thrown into freefall when he begins to lose his hearing.',
       Language: 'English, American Sign Language, French',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BODBiM2MzYTgtODkxOS00YzdkLThlOWUtYjQ5YzFjNmYwYjFkXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMWE5ZmYwNDEtYTYwMS00MTc0LTk2ZWItZTM1MjQ1ZDYzZGUzXkEyXkFqcGc@._V1_SX300.jpg',
     },
   ],
   Fiction: [
@@ -483,7 +483,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Matthew McConaughey, Anne Hathaway, Jessica Chastain, Mackenzie Foy',
       Plot: 'When Earth becomes uninhabitable, a team of explorers travels through a wormhole in space in an attempt to ensure humanity\'s survival.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDUyODYyMDJmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
     {
       imdbID: 'fic-2',
@@ -496,7 +496,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Ken Watanabe',
       Plot: 'A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project.',
       Language: 'English, Japanese, French',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
     {
       imdbID: 'fic-3',
@@ -509,7 +509,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving',
       Plot: 'When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.',
       Language: 'English',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi05M2YtLWI0M2Y3M2YyYzFhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg',
     },
     {
       imdbID: 'fic-4',
@@ -522,7 +522,7 @@ export const MOVIE_CATALOG: Record<string, Movie[]> = {
       Actors: 'Ryan Gosling, Harrison Ford, Ana de Armas, Sylvia Hoeks',
       Plot: 'A new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what\'s left of society into chaos. K\'s discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for thirty years.',
       Language: 'English, Finnish, Japanese, Somali, Russian',
-      Poster: 'https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYtNDYWZi00MTZiLTk0YTUtNWRmMjkyZjg1ODE5XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
+      Poster: 'https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_QL75_UX380_CR0,0,380,562_.jpg',
     },
   ],
 };
