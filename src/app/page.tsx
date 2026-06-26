@@ -9,17 +9,17 @@ export default function Home() {
   const router = useRouter();
   const { registerUser, loginUser, user, isLoggedIn, selectedCategories } = useAppStore();
 
-  // View toggle
+  
   const [isLoginView, setIsLoginView] = useState(false);
 
-  // Form states
+  
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [mobile, setMobile] = useState('');
   const [agreedToShare, setAgreedToShare] = useState(false);
 
-  // Error states
+  
   const [errors, setErrors] = useState({
     name: '',
     username: '',
@@ -28,7 +28,7 @@ export default function Home() {
     agreedToShare: '',
   });
 
-  // Redirect if already logged in
+  
   useEffect(() => {
     if (isLoggedIn && user) {
       if (selectedCategories.length >= 3) {
@@ -39,7 +39,7 @@ export default function Home() {
     }
   }, [isLoggedIn, user, selectedCategories, router]);
 
-  // Clear errors when toggling view
+  
   useEffect(() => {
     setErrors({
       name: '',
@@ -61,7 +61,7 @@ export default function Home() {
     };
 
     if (isLoginView) {
-      // Login validation
+      
       if (!username.trim()) {
         newErrors.username = 'Username is required';
         isValid = false;
@@ -70,7 +70,7 @@ export default function Home() {
       return isValid;
     }
 
-    // Sign Up validation
+    
     if (!name.trim()) {
       newErrors.name = 'Name is required';
       isValid = false;
@@ -153,28 +153,28 @@ export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 md:p-10 font-sans relative overflow-hidden">
       
-      {/* Decorative Radial Background Glows */}
+      {}
       <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[60%] rounded-full bg-emerald-950/10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[60%] rounded-full bg-purple-950/15 blur-[120px] pointer-events-none" />
 
-      {/* Main Container */}
+      {}
       <div className="w-full max-w-5xl glass-card rounded-[32px] overflow-hidden flex flex-col md:flex-row shadow-2xl relative z-10 min-h-[600px] border border-white/5">
         
-        {/* Left Side: Stunning Animated Intro Banner */}
+        {}
         <div 
           className="relative flex-1 p-8 md:p-16 flex flex-col justify-between min-h-[350px] md:min-h-full bg-cover bg-center"
           style={{
             backgroundImage: `linear-gradient(135deg, rgba(6, 9, 28, 0.9) 0%, rgba(4, 5, 10, 0.4) 100%), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200')`,
           }}
         >
-          {/* Top Logo */}
+          {}
           <div className="flex items-center space-x-2 select-none">
             <span className="text-2xl font-black text-brand-green tracking-wide drop-shadow-md">
               SUPER.APP
             </span>
           </div>
 
-          {/* Centered Pitch Card */}
+          {}
           <div className="glass-card p-6 md:p-8 rounded-2xl border border-white/10 glow-green max-w-[400px] space-y-4 transform hover:scale-[1.02] transition-transform duration-300">
             <span className="bg-emerald-500/10 text-brand-green font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full border border-emerald-500/20">
               NEW RELEASE
@@ -187,7 +187,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Footer stats */}
+          {}
           <div className="flex items-center space-x-6 text-zinc-500 text-xs">
             <span>Powered by Next.js 15</span>
             <span>•</span>
@@ -195,11 +195,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right Side: Form Panel */}
+        {}
         <div className="flex-1 p-8 md:p-16 flex flex-col justify-center bg-black/45 backdrop-blur-md">
           <div className="w-full max-w-[400px] mx-auto space-y-8">
             
-            {/* Header Text */}
+            {}
             <div className="space-y-2 select-none">
               <h2 className="text-4xl font-bold tracking-tight text-white flex items-center gap-2">
                 {isLoginView ? 'Welcome Back' : 'Get Started'}
@@ -210,13 +210,13 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Form */}
+            {}
             <form onSubmit={handleSubmit} className="space-y-5" noValidate>
               
-              {/* Conditional rendering of inputs */}
+              {}
               {!isLoginView && (
                 <>
-                  {/* Name */}
+                  {}
                   <div className="relative">
                     <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-zinc-500 pointer-events-none">
                       <User size={16} />
@@ -237,7 +237,7 @@ export default function Home() {
                 </>
               )}
 
-              {/* Username (Common to both) */}
+              {}
               <div className="relative">
                 <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-zinc-500 pointer-events-none font-bold text-xs select-none">
                   @
@@ -258,7 +258,7 @@ export default function Home() {
 
               {!isLoginView && (
                 <>
-                  {/* Email */}
+                  {}
                   <div className="relative">
                     <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-zinc-500 pointer-events-none">
                       <Mail size={16} />
@@ -277,7 +277,7 @@ export default function Home() {
                     )}
                   </div>
 
-                  {/* Mobile */}
+                  {}
                   <div className="relative">
                     <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-zinc-500 pointer-events-none">
                       <Smartphone size={16} />
@@ -296,7 +296,7 @@ export default function Home() {
                     )}
                   </div>
 
-                  {/* Checkbox */}
+                  {}
                   <div className="space-y-1">
                     <label className="flex items-center space-x-3 cursor-pointer select-none">
                       <input
@@ -316,7 +316,7 @@ export default function Home() {
                 </>
               )}
 
-              {/* Submit Button */}
+              {}
               <button
                 type="submit"
                 className="w-full bg-brand-green hover:bg-[#059669] hover:scale-[1.01] text-white font-bold py-3.5 px-4 rounded-xl tracking-wider uppercase transition-all duration-300 text-sm cursor-pointer shadow-lg hover:shadow-emerald-500/20 flex items-center justify-center gap-2 select-none animate-pulse-glow"
@@ -326,7 +326,7 @@ export default function Home() {
               </button>
             </form>
 
-            {/* Toggle Login/Signup view links */}
+            {}
             <div className="text-center select-none">
               <button
                 type="button"
@@ -347,7 +347,7 @@ export default function Home() {
               </button>
             </div>
 
-            {/* Legal Footnotes */}
+            {}
             <div className="space-y-2.5 text-[10px] text-zinc-500 leading-normal border-t border-white/5 pt-4 select-none">
               <p className="flex items-start gap-1.5">
                 <ShieldCheck size={14} className="text-brand-green shrink-0 mt-0.5" />

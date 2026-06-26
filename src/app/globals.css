@@ -9,7 +9,7 @@
   --brand-green: #10B981;
   --brand-green-dark: #065F46;
   
-  /* Category colors */
+  
   --category-action: #FF5E3A;
   --category-drama: #D7A4FF;
   --category-romance: #14852F;
@@ -20,7 +20,7 @@
   --category-music: #E61E2A;
   --category-fiction: #6CD061;
 
-  /* Dashboard card colors */
+  
   --card-profile: #5746EA;
   --card-weather-top: #FF4ADE;
   --card-weather-bottom: #10143E;
@@ -64,7 +64,7 @@ body {
   min-height: 100vh;
 }
 
-/* Custom Glassmorphism Utilities */
+
 @utility glass-card {
   background: rgba(13, 17, 35, 0.65);
   backdrop-filter: blur(20px);
@@ -111,7 +111,7 @@ body {
   box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
 }
 
-/* Custom Scrollbar */
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

@@ -10,10 +10,10 @@ export default function NotesWidget() {
   return (
     <div className="glass-card rounded-[28px] p-6 flex flex-col h-full shadow-2xl border border-amber-500/20 glow-gold relative overflow-hidden">
       
-      {/* Visual cyber glow in top corner */}
+      {}
       <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl pointer-events-none" />
 
-      {/* Header */}
+      {}
       <div className="flex justify-between items-center mb-4 select-none">
         <h2 className="text-xl font-bold tracking-wider text-amber-400 flex items-center gap-2 uppercase text-sm md:text-base">
           <Edit3 size={16} className="text-amber-400 animate-pulse" />
@@ -25,7 +25,7 @@ export default function NotesWidget() {
         </span>
       </div>
       
-      {/* Writing Area */}
+      {}
       <div className="flex-1 relative">
         <textarea
           value={notes}

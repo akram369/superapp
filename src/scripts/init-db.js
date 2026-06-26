@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const postgres = require('postgres');
 
-// Load environment variables manually from .env.local
+
 const envPath = path.join(__dirname, '../../.env.local');
 let databaseUrl = process.env.DATABASE_URL;
 
@@ -24,7 +24,7 @@ const sql = postgres(databaseUrl, { ssl: 'require' });
 
 async function init() {
   try {
-    // Create users table
+    
     await sql`
       CREATE TABLE IF NOT EXISTS users (
         id SERIAL PRIMARY KEY,
@@ -40,7 +40,7 @@ async function init() {
     `;
     console.log('✅ Users table created successfully (or already exists)!');
     
-    // Test fetch
+    
     const res = await sql`SELECT NOW()`;
     console.log('✅ Connection test successful! Server time:', res[0].now);
   } catch (err) {

@@ -71,9 +71,9 @@ export default function NewsWidget() {
   return (
     <div className="glass-card rounded-[28px] overflow-hidden shadow-2xl flex flex-col h-full border border-white/5 bg-[#0b0c16]/50">
       
-      {/* Top portion: Image with text overlay */}
+      {}
       <div className="relative h-[220px] sm:h-[240px] md:h-[260px] w-full shrink-0 overflow-hidden border-b border-white/5">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
+        {}
         <img
           src={currentArticle.image}
           alt="News Visual"
@@ -81,16 +81,16 @@ export default function NewsWidget() {
             fade ? 'opacity-100' : 'opacity-60'
           }`}
         />
-        {/* Gradient Overlay */}
+        {}
         <div className="absolute inset-0 bg-gradient-to-t from-[#05060d] via-[#05060d]/50 to-transparent" />
         
-        {/* News Feed Category Badge */}
+        {}
         <div className="absolute top-4 left-4 bg-black/60 text-brand-green font-bold text-[9px] uppercase tracking-widest px-2.5 py-1 rounded-full border border-emerald-500/20 backdrop-blur-md select-none flex items-center gap-1">
           <Newspaper size={10} />
           Hot Feed
         </div>
 
-        {/* Text Overlay */}
+        {}
         <div className={`absolute bottom-0 left-0 right-0 p-5 text-white space-y-1.5 transition-opacity duration-300 ${
           fade ? 'opacity-100' : 'opacity-0'
         }`}>
@@ -103,7 +103,7 @@ export default function NewsWidget() {
         </div>
       </div>
 
-      {/* Bottom portion: Text content */}
+      {}
       <div className="flex-1 p-5 overflow-y-auto bg-black/10 select-text">
         <p className={`text-xs md:text-sm leading-relaxed text-zinc-300 font-medium tracking-wide transition-opacity duration-300 ${
           fade ? 'opacity-100' : 'opacity-0'

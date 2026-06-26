@@ -11,20 +11,20 @@ export default function MoviesPage() {
   const { user, isLoggedIn, selectedCategories, logoutUser } = useAppStore();
   const [mounted, setMounted] = useState(false);
 
-  // Movie listings state
+  
   const [moviesByGenre, setMoviesByGenre] = useState<Record<string, Movie[]>>({});
   const [loading, setLoading] = useState(true);
 
-  // Modal state
+  
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
   const [modalLoading, setModalLoading] = useState(false);
 
-  // Set mounted flag to avoid hydration mismatch
+  
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Auth gate check
+  
   useEffect(() => {
     if (mounted) {
       if (!isLoggedIn || !user) {
@@ -35,7 +35,7 @@ export default function MoviesPage() {
     }
   }, [mounted, isLoggedIn, user, selectedCategories, router]);
 
-  // Fetch movies from OMDB if API key is provided, else use local catalog
+  
   useEffect(() => {
     if (!mounted || selectedCategories.length < 3) return;
 
@@ -111,7 +111,7 @@ export default function MoviesPage() {
     fetchAllMovies();
   }, [mounted, selectedCategories]);
 
-  // Click on a movie poster opens the modal
+  
   const handleMovieClick = async (movie: Movie) => {
     const apiKey = process.env.NEXT_PUBLIC_OMDB_API_KEY;
     
@@ -163,7 +163,7 @@ export default function MoviesPage() {
     );
   }
 
-  // Genre color shadows on hover
+  
   const shadowColorMap: Record<string, string> = {
     Action: 'hover:shadow-[0_0_20px_rgba(255,94,58,0.25)] hover:border-[#FF5E3A]/40',
     Drama: 'hover:shadow-[0_0_20px_rgba(215,164,255,0.25)] hover:border-[#D7A4FF]/40',
@@ -179,11 +179,11 @@ export default function MoviesPage() {
   return (
     <div className="min-h-screen bg-[#05060d] text-white p-6 md:p-12 font-sans relative overflow-hidden">
       
-      {/* Background Radial light spots */}
+      {}
       <div className="absolute top-[-30%] left-[-10%] w-[50%] h-[70%] rounded-full bg-emerald-950/10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-30%] right-[-10%] w-[50%] h-[70%] rounded-full bg-purple-950/10 blur-[120px] pointer-events-none" />
 
-      {/* Header Row */}
+      {}
       <header className="flex justify-between items-center mb-10 select-none border-b border-white/5 pb-4 relative z-10">
         <h1 
           className="text-3xl font-logo text-brand-green tracking-wide cursor-pointer"
@@ -200,13 +200,13 @@ export default function MoviesPage() {
             Log Out
           </button>
           
-          {/* User avatar linking back to dashboard */}
+          {}
           <div 
             onClick={() => router.push('/dashboard')}
             className="w-10 h-10 md:w-11 h-11 rounded-full border-2 border-brand-green/60 p-0.5 cursor-pointer bg-zinc-800 shadow-md hover:shadow-emerald-500/20 transform hover:scale-105 transition-transform"
           >
             <div className="w-full h-full rounded-full overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+              {}
               <img
                 src="https://api.dicebear.com/7.x/adventurer/svg?seed=vinay"
                 alt="User Profile"
@@ -217,7 +217,7 @@ export default function MoviesPage() {
         </div>
       </header>
 
-      {/* Page Title Header */}
+      {}
       <div className="mb-10 space-y-2 relative z-10 select-none">
         <span className="flex items-center gap-1.5 text-[10px] text-zinc-500 font-bold uppercase tracking-widest">
           <Clapperboard size={12} className="text-brand-green" />
@@ -228,7 +228,7 @@ export default function MoviesPage() {
         </h2>
       </div>
 
-      {/* Movies Grid Rows */}
+      {}
       {loading ? (
         <div className="flex flex-col items-center justify-center py-24 space-y-3 relative z-10">
           <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-brand-green"></div>
@@ -247,7 +247,7 @@ export default function MoviesPage() {
                   {genre}
                 </h3>
                 
-                {/* Horizontal grid rows */}
+                {}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   {movies.map((movie) => (
                     <div
@@ -255,9 +255,9 @@ export default function MoviesPage() {
                       onClick={() => handleMovieClick(movie)}
                       className={`group cursor-pointer rounded-2xl overflow-hidden border border-white/5 bg-[#0f1225]/45 backdrop-blur-md transition-all duration-500 transform hover:scale-[1.03] shadow-lg ${hoverShadowClass}`}
                     >
-                      {/* Image container */}
+                      {}
                       <div className="relative aspect-[2/3] w-full bg-zinc-950 overflow-hidden">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        {}
                         <img
                           src={movie.Poster}
                           alt={movie.Title}
@@ -265,7 +265,7 @@ export default function MoviesPage() {
                         />
                       </div>
                       
-                      {/* Caption text */}
+                      {}
                       <div className="p-4 select-none space-y-1">
                         <h4 className="text-xs md:text-sm font-bold truncate text-zinc-200 group-hover:text-white transition-colors">
                           {movie.Title}
@@ -287,12 +287,12 @@ export default function MoviesPage() {
         </div>
       )}
 
-      {/* Details Pop-up Modal */}
+      {}
       {selectedMovie && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 bg-black/85 backdrop-blur-md animate-fade-in">
           <div className="glass-card border border-white/10 text-white rounded-[32px] w-full max-w-3xl overflow-hidden shadow-2xl relative flex flex-col md:flex-row max-h-[90vh] md:max-h-[80vh] glow-purple">
             
-            {/* Close Button */}
+            {}
             <button
               onClick={() => setSelectedMovie(null)}
               className="absolute top-4 right-4 z-10 bg-black/60 hover:bg-black/80 rounded-full p-2 border border-white/10 transition-colors cursor-pointer text-white"
@@ -300,9 +300,9 @@ export default function MoviesPage() {
               <X size={18} />
             </button>
 
-            {/* Left Col: Poster Section */}
+            {}
             <div className="w-full md:w-2/5 relative bg-zinc-950 overflow-hidden shrink-0 flex items-center justify-center border-b md:border-b-0 md:border-r border-white/5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
+              {}
               <img
                 src={selectedMovie.Poster}
                 alt={selectedMovie.Title}
@@ -310,10 +310,10 @@ export default function MoviesPage() {
               />
             </div>
 
-            {/* Right Col: Details Section */}
+            {}
             <div className="flex-1 p-6 md:p-8 overflow-y-auto space-y-5 flex flex-col justify-between">
               
-              {/* Header Details */}
+              {}
               <div className="space-y-4">
                 <div className="space-y-1">
                   <h3 className="text-xl md:text-2xl font-black tracking-tight leading-tight pr-8">
@@ -332,7 +332,7 @@ export default function MoviesPage() {
                   </div>
                 </div>
 
-                {/* Genre badges */}
+                {}
                 <div className="flex flex-wrap gap-1.5">
                   {selectedMovie.Genre.split(',').map((g) => (
                     <span
@@ -344,7 +344,7 @@ export default function MoviesPage() {
                   ))}
                 </div>
 
-                {/* Plot info */}
+                {}
                 <div className="space-y-1.5">
                   <h4 className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">Plot Outline</h4>
                   {modalLoading ? (
@@ -360,7 +360,7 @@ export default function MoviesPage() {
                 </div>
               </div>
 
-              {/* Crew & Language Details */}
+              {}
               <div className="border-t border-white/5 pt-5 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-zinc-400">
                 <div className="space-y-2">
                   <div className="flex items-start gap-2">

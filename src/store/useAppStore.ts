@@ -127,7 +127,7 @@ export const useAppStore = create<AppState>()(
       clearStore: () => set({ user: null, selectedCategories: [], notes: '', isRegistered: false, isLoggedIn: false }),
     }),
     {
-      name: 'super-app-storage', // key in local storage
+      name: 'super-app-storage', 
     }
   )
 );

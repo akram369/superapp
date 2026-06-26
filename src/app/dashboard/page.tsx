@@ -15,12 +15,12 @@ export default function DashboardPage() {
   const { user, isLoggedIn, selectedCategories, logoutUser } = useAppStore();
   const [mounted, setMounted] = useState(false);
 
-  // Set mounted flag to avoid hydration mismatch
+  
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Auth & Gatekeeping check
+  
   useEffect(() => {
     if (mounted) {
       if (!isLoggedIn || !user) {
@@ -51,11 +51,11 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-[#05060d] text-white p-4 md:p-8 flex flex-col justify-between font-sans relative overflow-hidden">
       
-      {/* Decorative Glow Spheres */}
+      {}
       <div className="absolute top-[-30%] left-[-10%] w-[50%] h-[75%] rounded-full bg-emerald-950/10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-30%] right-[-10%] w-[50%] h-[75%] rounded-full bg-purple-950/15 blur-[120px] pointer-events-none" />
 
-      {/* Top Console Branding (Sleek cockpit header) */}
+      {}
       <header className="flex justify-between items-center mb-6 relative z-10 select-none border-b border-white/5 pb-4">
         <div className="flex items-center space-x-2 text-zinc-400 font-semibold text-xs tracking-widest uppercase">
           <LayoutDashboard size={14} className="text-brand-green animate-pulse" />
@@ -75,13 +75,13 @@ export default function DashboardPage() {
         </div>
       </header>
 
-      {/* Dashboard Main Grid */}
+      {}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 flex-1 items-stretch relative z-10">
         
-        {/* Left 2 Columns Wrapper */}
+        {}
         <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           
-          {/* Col 1: Profile + Weather */}
+          {}
           <div className="flex flex-col gap-6 justify-between h-full">
             <div className="flex-1 min-h-[220px]">
               <ProfileWidget />
@@ -91,25 +91,25 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* Col 2: Notes */}
+          {}
           <div className="h-full min-h-[350px] md:min-h-0">
             <NotesWidget />
           </div>
 
-          {/* Bottom row: Timer (Spans across Col 1 and Col 2) */}
+          {}
           <div className="md:col-span-2 min-h-[160px]">
             <TimerWidget />
           </div>
 
         </div>
 
-        {/* Right Column: News Widget & Browse Action */}
+        {}
         <div className="flex flex-col gap-4 h-full min-h-[450px] lg:min-h-0">
           <div className="flex-1">
             <NewsWidget />
           </div>
           
-          {/* Browse Navigation Button */}
+          {}
           <div className="flex justify-end shrink-0 select-none">
             <button
               onClick={handleBrowse}

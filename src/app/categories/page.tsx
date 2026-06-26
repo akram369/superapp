@@ -94,12 +94,12 @@ export default function CategoriesPage() {
   const { user, isLoggedIn, selectedCategories, toggleCategory, removeCategory } = useAppStore();
   const [mounted, setMounted] = useState(false);
 
-  // Set mounted flag to avoid hydration mismatch
+  
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Auth gate check
+  
   useEffect(() => {
     if (mounted && (!isLoggedIn || !user)) {
       router.push('/');
@@ -125,11 +125,11 @@ export default function CategoriesPage() {
   return (
     <div className="flex flex-col lg:flex-row min-h-screen bg-[#05060d] text-white p-6 lg:p-12 font-sans relative overflow-hidden">
       
-      {/* Background Radial Glow */}
+      {}
       <div className="absolute top-[-30%] right-[-10%] w-[60%] h-[70%] rounded-full bg-purple-950/15 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-30%] left-[-10%] w-[60%] h-[70%] rounded-full bg-emerald-950/15 blur-[120px] pointer-events-none" />
 
-      {/* Left Selection Summary Column */}
+      {}
       <div className="flex flex-col justify-between w-full lg:w-1/3 mb-10 lg:mb-0 lg:pr-12 relative z-10">
         <div className="space-y-6">
           <div className="flex items-center space-x-2 select-none">
@@ -149,7 +149,7 @@ export default function CategoriesPage() {
             </p>
           </div>
           
-          {/* Selected pills list */}
+          {}
           <div className="flex flex-wrap gap-2.5 mt-6">
             {selectedCategories.map((catName) => {
               const matchedCat = CATEGORIES.find(c => c.id === catName);
@@ -171,7 +171,7 @@ export default function CategoriesPage() {
           </div>
         </div>
 
-        {/* Warning & Next Button */}
+        {}
         <div className="mt-8 space-y-4">
           {!isGatekeepSatisfied && (
             <div className="flex items-center space-x-2.5 bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 rounded-2xl p-4 text-xs font-semibold animate-pulse-glow max-w-[320px] select-none">
@@ -194,7 +194,7 @@ export default function CategoriesPage() {
         </div>
       </div>
 
-      {/* Right Grid Selection Column */}
+      {}
       <div className="flex-1 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {CATEGORIES.map((category) => {
@@ -211,12 +211,12 @@ export default function CategoriesPage() {
                   borderColor: isSelected ? 'transparent' : 'rgba(255, 255, 255, 0.08)',
                 }}
               >
-                {/* Visual glow element on hover inside card */}
+                {}
                 {isSelected && (
                   <div className="absolute inset-0 bg-white/5 opacity-50 pointer-events-none" />
                 )}
 
-                {/* Category label */}
+                {}
                 <div className="flex justify-between items-start z-10">
                   <h3 className="text-lg md:text-xl font-extrabold tracking-wide text-white drop-shadow-md">
                     {category.name}
@@ -233,9 +233,9 @@ export default function CategoriesPage() {
                   )}
                 </div>
                 
-                {/* Category thumbnail with overlay blur on select */}
+                {}
                 <div className="w-full h-[60%] relative overflow-hidden rounded-2xl z-10 border border-white/5 bg-zinc-950">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  {}
                   <img
                     src={category.image}
                     alt={category.name}

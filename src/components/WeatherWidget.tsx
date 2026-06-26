@@ -28,11 +28,11 @@ export default function WeatherWidget() {
   const [weather, setWeather] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Live clock
+  
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      // Format: MM-DD-YYYY  |  HH:MM:SS AM/PM
+      
       const datePart = `${now.getMonth() + 1}-${now.getDate()}-${now.getFullYear()}`;
       const timePart = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
       setTime(`${datePart}  |  ${timePart}`);
@@ -42,7 +42,7 @@ export default function WeatherWidget() {
     return () => clearInterval(interval);
   }, []);
 
-  // Weather fetch (New Delhi default coordinates)
+  
   useEffect(() => {
     const fetchWeather = async () => {
       try {
@@ -59,7 +59,7 @@ export default function WeatherWidget() {
           const pressure = Math.round(current.pressure_msl);
           const code = current.weather_code;
 
-          // Map code to condition & icon
+          
           let condition = 'Sunny';
           let icon = <Sun size={40} className="text-yellow-400" />;
 
@@ -90,7 +90,7 @@ export default function WeatherWidget() {
         }
       } catch (err) {
         console.error('Failed fetching weather data:', err);
-        // Fallback mock weather matching Figma screenshot
+        
         setWeather({
           temp: 24,
           condition: 'Heavy rain',
@@ -109,12 +109,12 @@ export default function WeatherWidget() {
 
   return (
     <div className="glass-card rounded-[28px] overflow-hidden shadow-2xl flex flex-col h-full border border-white/5">
-      {/* Clock Gradient Top Bar */}
+      {}
       <div className="bg-gradient-to-r from-pink-500 via-[#FF4ADE] to-indigo-600 text-white font-bold py-2.5 px-6 text-center text-sm md:text-base tracking-widest select-none shrink-0 shadow-inner">
         {time || 'Syncing clock...'}
       </div>
 
-      {/* Weather Info Section */}
+      {}
       <div className="flex-1 p-6 flex items-center justify-around text-white">
         {loading || !weather ? (
           <div className="flex flex-col items-center gap-2">
@@ -123,7 +123,7 @@ export default function WeatherWidget() {
           </div>
         ) : (
           <div className="w-full grid grid-cols-3 items-center divide-x divide-white/10 select-none">
-            {/* Condition Icon */}
+            {}
             <div className="flex flex-col items-center justify-center space-y-1.5 px-1">
               <div className="filter drop-shadow-[0_0_8px_rgba(255,255,255,0.15)]">
                 {weather.icon}
@@ -133,7 +133,7 @@ export default function WeatherWidget() {
               </span>
             </div>
 
-            {/* Temperature & Pressure */}
+            {}
             <div className="flex flex-col items-center justify-center px-2 space-y-2">
               <span className="text-4xl font-black tracking-tight text-white">
                 {weather.temp}°C
@@ -147,7 +147,7 @@ export default function WeatherWidget() {
               </div>
             </div>
 
-            {/* Wind & Humidity */}
+            {}
             <div className="flex flex-col justify-center px-4 space-y-2.5">
               <div className="flex items-center space-x-2 text-zinc-300 font-semibold text-[10px] uppercase">
                 <Wind size={15} className="shrink-0 text-sky-300" />

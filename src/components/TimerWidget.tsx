@@ -4,26 +4,26 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronUp, ChevronDown, Play, Pause, RotateCcw, Clock } from 'lucide-react';
 
 export default function TimerWidget() {
-  // Input settings states
+  
   const [inputHrs, setInputHrs] = useState(0);
   const [inputMins, setInputMins] = useState(5);
   const [inputSecs, setInputSecs] = useState(0);
 
-  // Active timer states
+  
   const [totalSeconds, setTotalSeconds] = useState(0);
   const [remainingSeconds, setRemainingSeconds] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Clean up interval on unmount
+  
   useEffect(() => {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, []);
 
-  // Web Audio API Synth Alarm
+  
   const triggerAlarm = () => {
     try {
       const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
@@ -36,7 +36,7 @@ export default function TimerWidget() {
         osc.connect(gain);
         gain.connect(ctx.destination);
         osc.type = 'sine';
-        osc.frequency.setValueAtTime(880, startTime); // A5 note
+        osc.frequency.setValueAtTime(880, startTime); 
         gain.gain.setValueAtTime(0, startTime);
         gain.gain.linearRampToValueAtTime(0.3, startTime + 0.05);
         gain.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
@@ -44,7 +44,7 @@ export default function TimerWidget() {
         osc.stop(startTime + duration);
       };
 
-      // Play 3 beeps spaced 0.3s apart
+      
       playBeep(ctx.currentTime, 0.25);
       playBeep(ctx.currentTime + 0.3, 0.25);
       playBeep(ctx.currentTime + 0.6, 0.4);
@@ -53,7 +53,7 @@ export default function TimerWidget() {
     }
   };
 
-  // Timer Tick handler
+  
   useEffect(() => {
     if (isRunning) {
       timerRef.current = setInterval(() => {
@@ -79,7 +79,7 @@ export default function TimerWidget() {
     };
   }, [isRunning]);
 
-  // Adjust timers
+  
   const adjustHrs = (amount: number) => {
     if (isRunning) return;
     setInputHrs((prev) => Math.max(0, Math.min(99, prev + amount)));
@@ -105,7 +105,7 @@ export default function TimerWidget() {
     });
   };
 
-  // Start / Pause
+  
   const handleToggle = () => {
     if (isRunning) {
       setIsRunning(false);
@@ -121,14 +121,14 @@ export default function TimerWidget() {
     }
   };
 
-  // Reset
+  
   const handleReset = () => {
     setIsRunning(false);
     setRemainingSeconds(0);
     setTotalSeconds(0);
   };
 
-  // Format helper
+  
   const formatTime = (secs: number) => {
     const h = Math.floor(secs / 3600);
     const m = Math.floor((secs % 3600) / 60);
@@ -144,8 +144,8 @@ export default function TimerWidget() {
   const activeTime = isRunning || remainingSeconds > 0 ? remainingSeconds : (inputHrs * 3600 + inputMins * 60 + inputSecs);
   const timeStrings = formatTime(activeTime);
 
-  // SVG Progress Ring calculations
-  // Expanded Circle size: Radius = 72, Circumference = 452.39 (for width = 44)
+  
+  
   const radius = 72;
   const circumference = 2 * Math.PI * radius;
   const progressPercent = totalSeconds > 0 ? (remainingSeconds / totalSeconds) * 100 : 100;
@@ -154,10 +154,10 @@ export default function TimerWidget() {
   return (
     <div className="glass-card rounded-[28px] p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl border border-red-500/10 glow-coral text-white h-full relative overflow-hidden">
       
-      {/* Background radial glow */}
+      {}
       <div className="absolute top-0 left-0 w-24 h-24 bg-red-500/5 rounded-full blur-xl pointer-events-none" />
 
-      {/* Column 1: Progress Ring & Clock text */}
+      {}
       <div className="relative w-40 h-40 md:w-44 md:h-44 flex items-center justify-center shrink-0">
         <svg className="w-full h-full transform -rotate-90">
           <defs>
@@ -166,7 +166,7 @@ export default function TimerWidget() {
               <stop offset="100%" stopColor="#FD5F5F" />
             </linearGradient>
           </defs>
-          {/* Background Ring */}
+          {}
           <circle
             cx="50%"
             cy="50%"
@@ -175,7 +175,7 @@ export default function TimerWidget() {
             stroke="rgba(255, 255, 255, 0.03)"
             strokeWidth="7"
           />
-          {/* Progress Ring */}
+          {}
           <circle
             cx="50%"
             cy="50%"
@@ -189,13 +189,13 @@ export default function TimerWidget() {
             className="transition-all duration-1000 ease-linear filter drop-shadow-[0_0_8px_rgba(255,107,107,0.35)]"
           />
         </svg>
-        {/* Countdown digits overlay - perfectly contained and font size scaled */}
+        {}
         <div className="absolute font-mono text-xl md:text-2xl font-black select-none tracking-widest text-[#FF6B6B] drop-shadow-[0_0_8px_rgba(255,107,107,0.3)]">
           {timeStrings.full}
         </div>
       </div>
 
-      {/* Column 2: Presets (Fills the empty center space beautifully!) */}
+      {}
       <div className="flex flex-col items-center md:items-start gap-2 select-none shrink-0 relative z-10">
         <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">Quick Presets</span>
         <div className="grid grid-cols-3 gap-2">
@@ -218,19 +218,19 @@ export default function TimerWidget() {
         </div>
       </div>
 
-      {/* Column 3: Time Adjustments & Controls */}
+      {}
       <div className="flex flex-col justify-center space-y-4 w-full md:max-w-[220px] relative z-10 shrink-0">
         
-        {/* Title */}
+        {}
         <div className="hidden md:flex items-center gap-1.5 text-[10px] text-zinc-500 font-bold uppercase tracking-widest select-none">
           <Clock size={12} className="text-zinc-500" />
           Countdown Control
         </div>
 
-        {/* Setters */}
+        {}
         <div className="flex justify-between items-center text-center">
           
-          {/* Hours block */}
+          {}
           <div className="flex flex-col items-center">
             <span className="text-[9px] text-zinc-500 uppercase tracking-wider mb-1 select-none font-bold">Hours</span>
             <button 
@@ -258,7 +258,7 @@ export default function TimerWidget() {
 
           <span className="text-xl font-light text-zinc-700 mb-1 select-none">:</span>
 
-          {/* Minutes block */}
+          {}
           <div className="flex flex-col items-center">
             <span className="text-[9px] text-zinc-500 uppercase tracking-wider mb-1 select-none font-bold">Mins</span>
             <button 
@@ -286,7 +286,7 @@ export default function TimerWidget() {
 
           <span className="text-xl font-light text-zinc-700 mb-1 select-none">:</span>
 
-          {/* Seconds block */}
+          {}
           <div className="flex flex-col items-center">
             <span className="text-[9px] text-zinc-500 uppercase tracking-wider mb-1 select-none font-bold">Secs</span>
             <button 
@@ -314,7 +314,7 @@ export default function TimerWidget() {
 
         </div>
 
-        {/* Buttons Grid */}
+        {}
         <div className="flex gap-2 pt-1">
           <button
             onClick={handleToggle}

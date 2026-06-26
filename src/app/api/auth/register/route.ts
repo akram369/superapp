@@ -9,7 +9,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    // Check if user already exists (case-insensitive username check)
+    
     const { data: existingUsers, error: selectError } = await supabase
       .from('users')
       .select('id')
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Username already exists' }, { status: 400 });
     }
 
-    // Insert user
+    
     const { data: insertedUser, error: insertError } = await supabase
       .from('users')
       .insert({
