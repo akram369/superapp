@@ -55,9 +55,50 @@ To ensure a seamless evaluation experience, the application utilizes a dual API-
 3. **News:** Auto-rotates local, high-quality, pre-compiled news stories (avoiding rate-limiting or CORS issues in the browser).
 
 ### Adding API Keys
-To use the live OMDB API, create a `.env.local` file in the root directory:
+To run the project with live APIs and Supabase, create a `.env.local` file in the root directory:
 ```env
+# (Optional) To use live OMDb API instead of local catalog
 NEXT_PUBLIC_OMDB_API_KEY=your_omdb_api_key_here
+
+# (Required) Supabase integration details
+NEXT_PUBLIC_SUPABASE_URL=https://jtxgunqyzswzzqatdjko.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_tbZFmyzt-Nt8oKzN5TYKDA_sa-RFRJS
+```
+
+---
+
+## 🗄️ Database Schema & RLS Setup (Supabase)
+
+To initialize the database table and enable proper read/write permissions for user registration, selected categories, and notes, execute the following SQL script inside the **SQL Editor** on your Supabase dashboard:
+
+```sql
+-- Create users table
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255) UNIQUE NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  mobile VARCHAR(20) NOT NULL,
+  agreed_to_share BOOLEAN NOT NULL DEFAULT FALSE,
+  selected_categories TEXT[] DEFAULT '{}',
+  notes TEXT DEFAULT '',
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Enable RLS
+ALTER TABLE users ENABLE ROW LEVEL SECURITY;
+
+-- Allow public read access (Login & validation check)
+CREATE POLICY "Allow public read access" ON users 
+  FOR SELECT TO anon, authenticated USING (true);
+
+-- Allow public inserts (User registration)
+CREATE POLICY "Allow public insert access" ON users 
+  FOR INSERT TO anon, authenticated WITH CHECK (true);
+
+-- Allow public updates (Syncing categories and notes)
+CREATE POLICY "Allow public update access" ON users 
+  FOR UPDATE TO anon, authenticated USING (true) WITH CHECK (true);
 ```
 
 ---
