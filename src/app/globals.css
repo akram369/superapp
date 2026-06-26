@@ -1,26 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Single+Day&family=Roboto:wght@300;400;500;700;900&display=swap');
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #05060d;
+  --foreground: #ffffff;
+  
+  --brand-green: #10B981;
+  --brand-green-dark: #065F46;
+  
+  /* Category colors */
+  --category-action: #FF5E3A;
+  --category-drama: #D7A4FF;
+  --category-romance: #14852F;
+  --category-thriller: #84C2FF;
+  --category-western: #A13E1B;
+  --category-horror: #7358FF;
+  --category-fantasy: #FF4ADE;
+  --category-music: #E61E2A;
+  --category-fiction: #6CD061;
+
+  /* Dashboard card colors */
+  --card-profile: #5746EA;
+  --card-weather-top: #FF4ADE;
+  --card-weather-bottom: #10143E;
+  --card-notes: #F1C40F;
+  --card-timer: #1E2343;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  
+  --color-brand-green: var(--brand-green);
+  --color-brand-green-dark: var(--brand-green-dark);
+  
+  --color-cat-action: var(--category-action);
+  --color-cat-drama: var(--category-drama);
+  --color-cat-romance: var(--category-romance);
+  --color-cat-thriller: var(--category-thriller);
+  --color-cat-western: var(--category-western);
+  --color-cat-horror: var(--category-horror);
+  --color-cat-fantasy: var(--category-fantasy);
+  --color-cat-music: var(--category-music);
+  --color-cat-fiction: var(--category-fiction);
+  
+  --color-card-profile: var(--card-profile);
+  --color-card-weather-top: var(--card-weather-top);
+  --color-card-weather-bottom: var(--card-weather-bottom);
+  --color-card-notes: var(--card-notes);
+  --color-card-timer: var(--card-timer);
+  
+  --font-roboto: 'Roboto', sans-serif;
+  --font-logo: 'Single Day', cursive;
+  --font-sans: 'DM Sans', sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at 50% 50%, #0e1124 0%, #04050a 100%);
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Glassmorphism Utilities */
+@utility glass-card {
+  background: rgba(13, 17, 35, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@utility glass-input {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f4f4f5;
+  transition: all 0.3s ease;
+  
+  &:focus {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: #10B981;
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+    outline: none;
+  }
+}
+
+@utility glow-green {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.35);
+}
+
+@utility glow-coral {
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.35);
+}
+
+@utility glow-gold {
+  box-shadow: 0 0 20px rgba(243, 199, 95, 0.35);
+}
+
+@utility glow-purple {
+  box-shadow: 0 0 20px rgba(115, 88, 255, 0.35);
+}
+
+@utility glow-pink {
+  box-shadow: 0 0 20px rgba(255, 74, 222, 0.35);
+}
+
+@utility glow-border-green {
+  border-color: rgba(16, 185, 129, 0.6);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.45);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s infinite ease-in-out;
 }
