@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { sql } from '@/lib/db';
+import { supabase } from '@/lib/supabaseClient';
 
 export async function POST(request: Request) {
   try {
@@ -9,23 +9,46 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    // Check if user already exists
-    const existing = await sql`
-      SELECT id FROM users WHERE LOWER(username) = ${username.trim().toLowerCase()}
-    `;
+    // Check if user already exists (case-insensitive username check)
+    const { data: existingUsers, error: selectError } = await supabase
+      .from('users')
+      .select('id')
+      .eq('username', username.trim().toLowerCase());
 
-    if (existing.length > 0) {
+    if (selectError) {
+      throw selectError;
+    }
+
+    if (existingUsers && existingUsers.length > 0) {
       return NextResponse.json({ error: 'Username already exists' }, { status: 400 });
     }
 
     // Insert user
-    const [user] = await sql`
-      INSERT INTO users (name, username, email, mobile, agreed_to_share)
-      VALUES (${name.trim()}, ${username.trim()}, ${email.trim()}, ${mobile.trim()}, ${agreedToShare})
-      RETURNING name, username, email, mobile, agreed_to_share AS "agreedToShare"
-    `;
+    const { data: insertedUser, error: insertError } = await supabase
+      .from('users')
+      .insert({
+        name: name.trim(),
+        username: username.trim().toLowerCase(),
+        email: email.trim(),
+        mobile: mobile.trim(),
+        agreed_to_share: agreedToShare,
+      })
+      .select('name, username, email, mobile, agreed_to_share')
+      .single();
 
-    return NextResponse.json({ user });
+    if (insertError) {
+      throw insertError;
+    }
+
+    return NextResponse.json({
+      user: {
+        name: insertedUser.name,
+        username: insertedUser.username,
+        email: insertedUser.email,
+        mobile: insertedUser.mobile,
+        agreedToShare: insertedUser.agreed_to_share,
+      },
+    });
   } catch (error: any) {
     console.error('Registration API error:', error);
     return NextResponse.json({ error: error.message || 'Internal Server Error' }, { status: 500 });

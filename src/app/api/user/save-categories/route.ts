@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { sql } from '@/lib/db';
+import { supabase } from '@/lib/supabaseClient';
 
 export async function POST(request: Request) {
   try {
@@ -13,11 +13,14 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Categories must be an array' }, { status: 400 });
     }
 
-    await sql`
-      UPDATE users
-      SET selected_categories = ${categories}
-      WHERE LOWER(username) = ${username.trim().toLowerCase()}
-    `;
+    const { error } = await supabase
+      .from('users')
+      .update({ selected_categories: categories })
+      .eq('username', username.trim().toLowerCase());
+
+    if (error) {
+      throw error;
+    }
 
     return NextResponse.json({ success: true });
   } catch (error: any) {

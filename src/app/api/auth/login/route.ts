@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { sql } from '@/lib/db';
+import { supabase } from '@/lib/supabaseClient';
 
 export async function POST(request: Request) {
   try {
@@ -9,26 +9,29 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Username is required' }, { status: 400 });
     }
 
-    const rows = await sql`
-      SELECT name, username, email, mobile, agreed_to_share AS "agreedToShare", selected_categories AS "selectedCategories", notes
-      FROM users
-      WHERE LOWER(username) = ${username.trim().toLowerCase()}
-    `;
+    const { data: userRow, error } = await supabase
+      .from('users')
+      .select('name, username, email, mobile, agreed_to_share, selected_categories, notes')
+      .eq('username', username.trim().toLowerCase())
+      .maybeSingle();
 
-    if (rows.length === 0) {
+    if (error) {
+      throw error;
+    }
+
+    if (!userRow) {
       return NextResponse.json({ error: 'User does not exist' }, { status: 404 });
     }
 
-    const userRow = rows[0];
     return NextResponse.json({
       user: {
         name: userRow.name,
         username: userRow.username,
         email: userRow.email,
         mobile: userRow.mobile,
-        agreedToShare: userRow.agreedToShare,
+        agreedToShare: userRow.agreed_to_share,
       },
-      selectedCategories: userRow.selectedCategories || [],
+      selectedCategories: userRow.selected_categories || [],
       notes: userRow.notes || '',
     });
   } catch (error: any) {

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { sql } from '@/lib/db';
+import { supabase } from '@/lib/supabaseClient';
 
 export async function POST(request: Request) {
   try {
@@ -9,11 +9,14 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Username is required' }, { status: 400 });
     }
 
-    await sql`
-      UPDATE users
-      SET notes = ${notes || ''}
-      WHERE LOWER(username) = ${username.trim().toLowerCase()}
-    `;
+    const { error } = await supabase
+      .from('users')
+      .update({ notes: notes || '' })
+      .eq('username', username.trim().toLowerCase());
+
+    if (error) {
+      throw error;
+    }
 
     return NextResponse.json({ success: true });
   } catch (error: any) {
