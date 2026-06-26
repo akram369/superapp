@@ -111,12 +111,12 @@ export default function Home() {
     return isValid;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (validateForm()) {
       if (isLoginView) {
-        const success = loginUser(username);
+        const success = await loginUser(username);
         if (success) {
           const store = useAppStore.getState();
           if (store.selectedCategories.length >= 3) {
@@ -131,14 +131,21 @@ export default function Home() {
           }));
         }
       } else {
-        registerUser({
+        const success = await registerUser({
           name,
           username,
           email,
           mobile,
           agreedToShare,
         });
-        router.push('/categories');
+        if (success) {
+          router.push('/categories');
+        } else {
+          setErrors(prev => ({
+            ...prev,
+            username: 'Registration failed or Username already exists',
+          }));
+        }
       }
     }
   };
